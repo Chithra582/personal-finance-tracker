@@ -1,0 +1,18 @@
+name: cashflow-projector
+description: Project net cash flow and calculate emergency reserve coverage.
+input_schema:
+  type: object
+  properties:
+    monthly_income:
+      type: number
+      description: Total reliable net monthly income.
+    monthly_expenses:
+      type: number
+      description: Total average monthly expenses.
+    liquid_savings:
+      type: number
+      description: Current cash reserves in checking/savings accounts.
+  required:
+    - monthly_income
+    - monthly_expenses
+    - liquid_savings

@@ -1,0 +1,16 @@
+name: expense-analyzer
+description: Analyze transaction categories and compute category spending distributions.
+input_schema:
+  type: object
+  properties:
+    transactions:
+      type: array
+      items:
+        type: object
+      description: List of transaction objects with date, amount, and category.
+    timeframe:
+      type: string
+      enum: [monthly, quarterly, annual]
+      description: Aggregation period.
+  required:
+    - transactions

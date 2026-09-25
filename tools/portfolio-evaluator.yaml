@@ -1,0 +1,15 @@
+name: portfolio-evaluator
+description: Evaluate stock portfolio holdings, calculate market value, and compute returns.
+input_schema:
+  type: object
+  properties:
+    holdings:
+      type: array
+      items:
+        type: object
+      description: List of stock holdings with ticker, shares, and buy price.
+    current_prices:
+      type: object
+      description: Key-value map of ticker symbols to current market prices.
+  required:
+    - holdings

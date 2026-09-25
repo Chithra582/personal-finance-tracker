@@ -1,0 +1,15 @@
+name: ledger-auditor
+description: Audit financial files for schema consistency and deduplicate entries.
+input_schema:
+  type: object
+  properties:
+    file_path:
+      type: string
+      description: Relative or absolute path to the CSV or JSON ledger file.
+    file_type:
+      type: string
+      enum: [csv, json, db]
+      description: File format extension.
+  required:
+    - file_path
+    - file_type
